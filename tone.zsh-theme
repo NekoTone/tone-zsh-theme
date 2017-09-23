@@ -177,7 +177,8 @@ prompt_virtualenv() {
 
 prompt_ssh() {
   local sshenv=$SSH_CLIENT
-  if [[ -n sshenv ]]; then
+  #if [[ -n sshenv ]]; then
+  if [ -z sshenv ]; then
     prompt_segment red white "SSH "
   fi
 }
