@@ -33,7 +33,7 @@ DEFAULT_USER='nbucco'
 # Special Powerline characters
 
 () {
-  local LC_ALL="" LC_CTYPE="en_US.UTF-8"
+  local LC_ALL="" LC_CTYPE="fr_FR.UTF-8"
   # NOTE: This segment separator character is correct.  In 2012, Powerline changed
   # the code points they use for their special characters. This is the new code point.
   # If this is not working for you, you probably have an old version of the 
@@ -43,7 +43,7 @@ DEFAULT_USER='nbucco'
   # This is defined using a Unicode escape sequence so it is unambiguously readable, regardless of
   # what font the user is viewing this source code in. Do not replace the
   # escape sequence with a single literal character.
-  SEGMENT_SEPARATOR=$'\ue0b0' # 
+	SEGMENT_SEPARATOR=$'\ue0b0' # 
 }
 
 # Begin a segment
@@ -178,7 +178,7 @@ prompt_virtualenv() {
 prompt_ssh() {
   local sshenv=$SSH_CLIENT
   #if [[ -n sshenv ]]; then
-  if [[ $sshenv ]]; then
+  if [[ -n $sshenv ]]; then
     prompt_segment red white "SSH "
   fi
 }
